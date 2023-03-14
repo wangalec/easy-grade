@@ -11,7 +11,7 @@ export default function DemoQuestion({question, answer}) {
 
     //check button to check for accuracy
     const onCheck = () => {
-
+        
     }
 
     return (

@@ -19,14 +19,14 @@ export default function Demo(){
     <>
     <DemoNavbar />
     <div>
-      ({questions.map(question => {
+      {questions.map(question => {
         return (
           <DemoQuestion
           questionName = {question.question}
           answer = {question.answer}
-        />
+          />
         )
-      })})
+      })}
     </div>
         </>
   )

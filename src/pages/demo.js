@@ -10,7 +10,23 @@ export default function Demo(){
     {
       question: "Molecular Biology",
       answer: "the study of living processes in terms of the chemicals involved"
-    }
+    },
+    {
+      question: "boiling point",
+      answer: "temperature at which a liquid will turn to a gas"
+    },
+    {
+      question: "freezing point",
+      answer: "temperature at which a liquid turns into a solid"
+    },
+    {
+      question: "collagen",
+      answer: "structural protein that forms connective tissue in animals"
+    },
+    {
+      question: "nucleotides",
+      answer: "neuclic acid base pairs"
+    },
   ]
 
   return(

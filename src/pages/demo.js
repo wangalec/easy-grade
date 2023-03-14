@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import styles from '../styles/Home.module.css'
 import axios from 'axios';
 
-import DemoQuestion from "../components/DemoNavbar";
-import DemoNavbar from "../components/DemoQuestion";
+import DemoQuestion from "../components/DemoQuestion";
+import DemoNavbar from "../components/Navbar";
 
 export default function Demo(){
   const questions = [
@@ -15,11 +15,11 @@ export default function Demo(){
 
   return(
     <div className={styles.demoPage}>
-      <DemoQuestion />
+      <DemoNavbar />
       <div>
         {questions.map(question => {
           return (
-            <DemoNavbar
+            <DemoQuestion
             question = {question.question}
             answer = {question.answer}
           />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 import styles from '../styles/DemoQuestion.module.css'
 export default function DemoQuestion({question, answer}) {
 
@@ -6,32 +7,41 @@ export default function DemoQuestion({question, answer}) {
     const[answerValue, setAnswerValue] = useState("");
 
     const handleChange = (e) => {
+        console.log(e.target.value);
         setAnswerValue(e.target.value)
     }
 
     //check button to check for accuracy
     const onCheck = () => {
-        
+        axios.post("/api/demo-check-answer", { input: answerValue, answer: answer }).then((data) => {
+            console.log(data.data[0]);
+            setScore(data.data[0].toFixed(2));
+        })
     }
 
     return (
-        <div>
-            <div>
+        <div className={styles.mainContainer}>
+            <div className={styles.questionContainer}>
                 <div className={styles.question}>
                     <h2> {question} </h2>
                 </div>
-                <div className={styles.answer}>
-                    <h2> {answer} </h2>
+                <div className={styles.questionInner}>
+                <div className={styles.textBox}>
+                    <textarea 
+                    className={styles.textBox}
+                    value={answer} 
+                    />
                 </div>
-                <div className={styles.input}>
+                <div className={styles.textBox}>
                     <textarea
                         value={answerValue}
                         onChange={(e) => {setAnswerValue(e.target.value)}} 
                     />
                 </div>
+                </div>
             </div>
-            <div>
-                <div className={styles.rightContainer}>
+            <div className={styles.rightContainer}>
+                <div>
                     <div className={styles.scoreContainer}>
                         <div className={styles.score}>
                             Score: {score}
@@ -44,7 +54,7 @@ export default function DemoQuestion({question, answer}) {
                             }
                         </div>
                     </div>
-                    <button onClick={onCheck}> Check </button>
+                    <button className={styles.check} onClick={onCheck}> Check </button>
                 </div>
             </div>
         </div>

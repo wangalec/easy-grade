@@ -8,23 +8,23 @@ import DemoNavbar from "../components/Navbar";
 export default function Demo(){
   const questions = [
     {
-      question: "Molecular Biology",
+      question: "What is molecular biology?",
       answer: "the study of living processes in terms of the chemicals involved"
     },
     {
-      question: "boiling point",
+      question: "What is boiling point?",
       answer: "temperature at which a liquid will turn to a gas"
     },
     {
-      question: "freezing point",
+      question: "What is freezing point?",
       answer: "temperature at which a liquid turns into a solid"
     },
     {
-      question: "collagen",
+      question: "What is collagen?",
       answer: "structural protein that forms connective tissue in animals"
     },
     {
-      question: "nucleotides",
+      question: "What are nucleotides?",
       answer: "neuclic acid base pairs"
     },
   ]

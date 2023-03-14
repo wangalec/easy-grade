@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import styles from '../styles/DemoQuestion.module.css'
 export default function DemoQuestion({question, answer}) {
 
     const[score, setScore] = useState(0);
@@ -17,13 +17,13 @@ export default function DemoQuestion({question, answer}) {
     return (
         <div>
             <div>
-                <div className='question'>
+                <div className={styles.question}>
                     <h2> {question} </h2>
                 </div>
-                <div className='answer'>
+                <div className={styles.answer}>
                     <h2> {answer} </h2>
                 </div>
-                <div className='input'>
+                <div className={styles.input}>
                     <textarea
                         value={answerValue}
                         onChange={(e) => {setAnswerValue(e.target.value)}} 
@@ -31,12 +31,12 @@ export default function DemoQuestion({question, answer}) {
                 </div>
             </div>
             <div>
-                <div className='right-container'>
-                    <div className='score-container'>
-                        <div className='score'>
+                <div className={styles.rightContainer}>
+                    <div className={styles.scoreContainer}>
+                        <div className={styles.score}>
                             Score: {score}
                         </div>
-                        <div className='pass'>
+                        <div className={styles.pass}>
                             {
                                 score >= 0.9 ? <h2> Correct </h2> : 
                                 score >= 0.8 ? <h2> Unsure </h2> : 

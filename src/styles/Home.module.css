@@ -7,6 +7,26 @@
   min-height: 100vh;
 }
 
+.nav {
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navPages {
+  list-style-type: none;
+  float: left;
+  text-decoration: underline;
+  margin-top: 37px;
+  margin-left: 93px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.demoPage {
+  margin-right: 55px;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

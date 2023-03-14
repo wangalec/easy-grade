@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from '../styles/Home.module.css'
 import axios from 'axios';
 
 import DemoQuestion from "../components/DemoNavbar";
@@ -11,23 +12,20 @@ export default function Demo(){
       answer: "the study of living processes in terms of the chemicals involved"
     }
   ]
-  const check = () => {
-
-  }
 
   return(
-    <>
-    <DemoNavbar />
-    <div>
-      ({questions.map(question => {
-        return (
-          <DemoQuestion
-          questionName = {question.question}
-          answer = {question.answer}
-        />
-        )
-      })})
+    <div className={styles.demoPage}>
+      <DemoQuestion />
+      <div>
+        {questions.map(question => {
+          return (
+            <DemoNavbar
+            question = {question.question}
+            answer = {question.answer}
+          />
+          )
+        })}
+      </div>
     </div>
-        </>
   )
 }

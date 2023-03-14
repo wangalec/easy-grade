@@ -26,18 +26,19 @@ export default function DemoQuestion({question, answer}) {
                     <h2> {question} </h2>
                 </div>
                 <div className={styles.questionInner}>
-                <div className={styles.textBox}>
-                    <textarea 
-                    className={styles.textBox}
-                    value={answer} 
-                    />
-                </div>
-                <div className={styles.textBox}>
-                    <textarea
-                        value={answerValue}
-                        onChange={(e) => {setAnswerValue(e.target.value)}} 
-                    />
-                </div>
+                    <div className={styles.textBox}>
+                        <textarea 
+                        className={styles.textBox}
+                        value={answer} 
+                        />
+                    </div>
+                    <div className={styles.textBox}>
+                        <textarea
+                            className={styles.textBox}
+                            value={answerValue}
+                            onChange={(e) => {setAnswerValue(e.target.value)}} 
+                        />
+                    </div>
                 </div>
             </div>
             <div className={styles.rightContainer}>

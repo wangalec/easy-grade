@@ -12,8 +12,8 @@ export default function Demo(){
       answer: "the study of living processes in terms of the chemicals involved"
     },
     {
-      question: "What is boiling point?",
-      answer: "temperature at which a liquid will turn to a gas"
+      question: "What is second person point of view?",
+      answer: "The narrator tells the story using the pronouns \"You\", \"Your,\" and \"Yours\" to address a reader or listener directly"
     },
     {
       question: "What is freezing point?",
